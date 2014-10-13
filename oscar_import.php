@@ -8,6 +8,7 @@ define('STATUS_PUBLISHED', 1);
 define('STATUS_UNPUBLISHED', 0);
 
 define('ROWS_OSCAR', 131); // How many rows of the spreadsheet have data
+define('FILENAME_OSCAR', 'oscar_data.xls'); // The name of the file to import
 
 define('MODE_DEBUG', 1); // Whether the script is in debug mode
 
@@ -49,7 +50,7 @@ function process_oscar_records() {
 
   $sheet->setOutputEncoding("UTF-8");
 
-  $sheet->read("Oscar_data.xls");
+  $sheet->read(FILENAME_OSCAR);
 
   $records = array();
 
