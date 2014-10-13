@@ -53,7 +53,7 @@ function process_oscar_records() {
 
   $records = array();
 
-  for($i = 1; $i <= $sheet->sheets[0]['numRows']; $i++) {
+  for($i = 1; $i <= ROWS_OSCAR; $i++) {
     for($j = 1; $j <= $sheet->sheets[0]['numCols']; $j++) {
       $records[$i][$j] = $sheet->sheets[0][$i][$j];
     }
