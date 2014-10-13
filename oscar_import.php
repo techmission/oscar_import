@@ -138,7 +138,7 @@ EOT;
       mysql_real_escape_string($record['country_name']),
       mysql_real_escape_string($record['description']),
       mysql_real_escape_string($record['description']),
-      now(),
+      time(),
       DATA_SOURCE,
       $org_id,
       $guid,
