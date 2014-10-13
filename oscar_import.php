@@ -144,16 +144,14 @@ EOT;
       $guid,
       $guid,
       $status);
-    // Just print the query if in debug mode  
+    // Print the query if in debug mode  
     if (MODE_DEBUG == TRUE) {
       echo $qry . PHP_EOL;
     }
-    else {
-      // Execute the query and determine whether the insert was successful
-      $result = mysql_query($qry);
-      if($result) {
-        $count = mysql_affected_rows();
-      }
+    // Execute the query and determine whether the insert was successful
+    $result = mysql_query($qry);
+    if($result) {
+      $count = mysql_affected_rows();
     }
     // Increment the guid number for the insert
     $start_guid++;
