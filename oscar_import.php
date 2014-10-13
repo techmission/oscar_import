@@ -60,6 +60,30 @@ function process_oscar_records() {
     }
   }
 
+  $key = '';
+  foreach($records as $rownum => $record) {
+    foreach($record as $colnum => $value) {
+      switch($colnum) {
+        case 1:
+          $key = 'title';
+          break;
+        case 2:
+          $key = 'referralurl';
+          break;
+        case 3:
+          $key = 'org_name';
+          break;
+        case 4:
+          $key = 'country_name';
+          break;
+        case 5:
+          $key = 'description';
+          break;
+      }
+      $records[$rownum][$key] = $records[$rownum][$colnum];
+      unset($records[$rownum][$colnum]);
+    }
+  }
   return $records;
 }
 
