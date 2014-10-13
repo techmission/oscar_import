@@ -128,7 +128,7 @@ function insert_oscar_records(array $records) {
     INSERT INTO tbl_opportunities
       (title, referralurl, org_name, country_name, description, short_description,
         created, source, org_reference_id, guid, source_guid, status)
-      VALUES ('%s','%s', '%s', '%s', '%s, '%s', %d, '%s', %d, '%s', '%s', %d)
+      VALUES ('%s','%s', '%s', '%s', '%s', '%s', %d, '%s', %d, '%s', '%s', %d)
 EOT;
     // Prepare the query with the values
     $qry = sprintf($qs, 
